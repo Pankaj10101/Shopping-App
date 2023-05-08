@@ -51,6 +51,14 @@ const Footer = () => {
           <div className="text">Contact Us</div>
         </div>
       </div>
+      <div className="bottom-bar">
+        <div className="bottom-bar-content">
+          <div className="text">
+          @rightsreserved
+          </div>
+          <img src={Payment} alt="payment" />
+        </div>
+      </div>
     </footer>
   );
 };
