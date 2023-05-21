@@ -1,8 +1,18 @@
 import React from 'react'
-
-const Products = () => {
+import './Products.scss'
+import Product from './Product/Product'
+const Products = ({innerPage, headingText}) => {
   return (
-    <div>Products</div>
+  <div className="products-container">
+    {!innerPage && <div className="sec-heading">{headingText}</div>}
+      <div className="products">
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+      </div>
+  </div>
   )
 }
 

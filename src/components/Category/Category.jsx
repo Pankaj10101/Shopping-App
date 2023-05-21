@@ -1,8 +1,16 @@
 import React from 'react'
-
+import './Category.scss'
+import Products from '../Products/Products'
 const Category = () => {
   return (
-    <div>Category</div>
+    <div className="category-main-content">
+    <div className="layout">
+      <div className="category-title">
+      Category Title
+      </div>
+      <Products innerPage = {true}/>
+    </div>
+    </div>
   )
 }
 

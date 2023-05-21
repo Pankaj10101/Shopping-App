@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Products from '../../Products/Products'
 const RelatedProducts = () => {
   return (
-    <div>RelatedProducts</div>
+    <div className='related-products'><Products headingText = 'Related Products'  /></div>
   )
 }
 

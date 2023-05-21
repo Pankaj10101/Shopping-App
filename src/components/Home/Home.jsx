@@ -1,10 +1,33 @@
-import React from 'react'
-import Banner from './Banner/Banner'
-import './Home.scss'
+import React, { useContext, useEffect } from "react";
+import Banner from "./Banner/Banner";
+import "./Home.scss";
+import Products from "../Products/Products";
+import Category from "./Category/Category";
+import { fetchDataFromApi } from "../../store/api";
+import { Context } from "../../store/context";
 const Home = () => {
-  return (
-    <div className='home' ><Banner/></div>
-  )
-}
+  const { categories, setCategories } = useContext(Context);
+  useEffect(() => {
+    getCategories();
+  }, []);
 
-export default Home
+  const getCategories = () => {
+    fetchDataFromApi("/api/categories?populate=*").then((res) => {
+      console.log(res.data);
+      setCategories(res)
+    });
+  };
+  return (
+    <div>
+      <Banner />
+      <div className="main-content">
+        <div className="layout">
+          <Category categories = {categories} />
+          <Products headingText="Popular Products" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
