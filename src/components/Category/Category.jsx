@@ -12,6 +12,8 @@ const Category = () => {
   const {data} = useFetch(`/api/products?populate=*&[filters][categories][id]=${id}`)
   console.log(data)
   return (
+    <section  id='category-section'>
+
     <div className="category-main-content">
     <div className="layout">
       <div className="category-title">
@@ -20,6 +22,7 @@ const Category = () => {
       <Products innerPage = {true} products={data}/>
     </div>
     </div>
+    </section>
   )
 }
 

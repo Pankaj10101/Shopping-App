@@ -14,13 +14,11 @@ const Home = () => {
 
   const getProducts = async () => {
     fetchDataFromApi("/api/products?populate=*").then((res) => {
-      console.log(res);
       setProducts(res)
     });
   };
   const getCategories = async () => {
     fetchDataFromApi("/api/categories?populate=*").then((res) => {
-      console.log(res);
       setCategories(res)
     });
   };

@@ -8,19 +8,25 @@ import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./store/context";
+import Auth from "./components/Auth/Auth";
+import {ToastContainer} from 'react-toastify'
+import Profile from "./components/Profile/Profile";
 
 function App() {
     return (
         <BrowserRouter>
-        <AppContext>
+        <AppContext>    
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/category/:id" element={<Category />} />
                     <Route path="/product/:id" element={<SingleProduct />} />
+                    <Route path="/auth" element={<Auth/>} />
+                    <Route path="/profile" element={<Profile/>} />
                 </Routes>
                 <Newsletter />
                 <Footer />
+                <ToastContainer/>
                 </AppContext>
         </BrowserRouter>
     );

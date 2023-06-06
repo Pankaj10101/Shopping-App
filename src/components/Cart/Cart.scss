@@ -142,3 +142,14 @@
         transform: translateX(0);
     }
 }
+
+.modal-close{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse ;
+}
+.modal-close span svg{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
