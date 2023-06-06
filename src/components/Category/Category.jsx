@@ -13,7 +13,6 @@ const Category = () => {
   console.log(data)
   return (
     <section  id='category-section'>
-
     <div className="category-main-content">
     <div className="layout">
       <div className="category-title">
