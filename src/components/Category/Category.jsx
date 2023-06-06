@@ -19,6 +19,7 @@ const Category = () => {
       {data?.data?.[0]?.attributes?.categories?.data?.[0]?.attributes?.title}
       </div>
       <Products innerPage = {true} products={data}/>
+      
     </div>
     </div>
     </section>
